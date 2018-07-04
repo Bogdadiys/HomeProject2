@@ -10,4 +10,6 @@ first_w(<<" ",_R/binary>>, Acc)->
 first_w(<<L,R/binary>>, Acc)->
 	first_w(R, <<Acc/binary, L>>);
 first_w(<<>>, Acc)->
-	Acc.
+	Acc;
+first_w(_, _)->
+	undefined.

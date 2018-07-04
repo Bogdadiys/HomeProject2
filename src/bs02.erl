@@ -10,7 +10,9 @@ words(Word,<<" ", Text/binary>>)->
 words(Word,<<L,Text/binary>>)->
 	words(<<Word/binary, L>>,Text);
 words(Word,<<>>)->
-	[Word].
+	[Word];
+words(_,_)->
+	undefined.
 
 
 

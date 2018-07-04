@@ -15,7 +15,8 @@ spl(BinText,BinSplit,Word)->
 		<<>> when Word == <<>> ->
 			[];
 		<<>> ->
-			[Word]
+			[Word];
+		_ -> undefined
 	end.
 
 %split(<<>>,_)->
